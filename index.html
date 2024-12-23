@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FASHION POINT</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section id="header-main">
+      <header>
+        <div class="logo">
+          <h1>Fashion Point</h1>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#about"><li >About us</li></a>
+            <a href="#Contact"><li>Contact</li></a>
+            <a href="#service"><li>Service</li></a>
+          </ul>
+          <div class="nav-search">
+            <input type="text" placeholder="Search For the Products" />
+            <button>Search</button>
+          </div>
+          <div class="login">
+            <button id="login">SignUp</button>
+            <button id="cart">Cart</button>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <h2>Fashion point welcomes You...</h2>
+        <p>FOR THE DENIM OBSESSED!</p>
+        <a href="#shopnow"><button>Shop Now</button></a>
+      </div>
+    </section>
+
+    <section class="arrivals">
+      <h1>New Arrivals</h1>
+      <div class="newarrivals" id="shopnow">
+        <div>
+          <a href="shirts.html">
+            <img src="pngegg.png" alt="" />
+            <p>Mens Shirts</p>
+          </a>
+        </div>
+        <div>
+          <a href="pants.html">
+            <img src="pngwing.com.png" alt="" />
+            <p>Mens Pants</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="cart"></div>
+
+    <section class="about">
+      <div class="left">
+        <img src="SuitBackGround.png" alt="" />
+      </div>
+      <div class="right">
+        <h1>A CUT ABOVE</h1>
+        <p style="text-align: center; font-size: 32px">-</p>
+        <p style="font-family: 'Times New Roman', Times, serif">
+          Our United Tailors suits are slim for a clean and tailored fit. A
+          flattering modern construction sets the tone for your most important
+          occasions.
+        </p>
+      </div>
+    </section>
+    <section class="store " id="service">
+      <div class="left">
+        <img src="Store.jfif" alt="" />
+      </div>
+      <div class="right">
+        <h1>Our Store provides You the best Service.</h1>
+        <p>
+          At our store, we prioritize exceptional service, ensuring a seamless
+          shopping experience. Our dedicated team is committed to helping you
+          find the perfect fit, providing personalized support every step of the
+          way
+        </p>
+      </div>
+    </section>
+    <section class="us" id="about">
+      <div class="usright">
+        <h1>Why Us?</h1>
+        <p>
+          we are committed to redefining men’s fashion with a perfect blend of
+          style, quality, and comfort. Our collection features exclusive designs
+          that cater to the modern man, ensuring you look your best for any
+          occasion. We take pride in offering premium-quality apparel at
+          affordable prices, making fashion accessible without compromising on
+          durability. With a focus on customer satisfaction, we provide fast
+          delivery, hassle-free returns, and exceptional service. Additionally,
+          our commitment to sustainable practices ensures you can shop with
+          confidence, knowing you're supporting a brand that values the planet
+          as much as you do.
+        </p>
+      </div>
+      <div class="usleft">
+        <img src="whyUs.jpg" alt="" />
+      </div>
+    </section>
+    <section class="contact-us" id="Contact">
+        <h1>Contact Us</h1>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+      
+
+    <footer>
+      <div class="footer">
+        <div class="f-logo">
+          <h1>Fashion Point</h1>
+          <h2>We serve You Quality</h2>
+        </div>
+        <div class="f-menu">
+          <h4>WEEBLY THEMES</h4>
+          <h4>PRESALE FAQS</h4>
+          <h4>SUBMIT A TICKET</h4>
+        </div>
+        <div class="f-menu">
+          <h4>SERVICES</h4>
+          <h4>THEME TWEAK</h4>
+        </div>
+        <div class="f-menu">
+          <h4>SHOWCASE</h4>
+          <h4>WIDGETKIT</h4>
+          <h4>SUPPORT</h4>
+        </div>
+        <div class="f-menu">
+          <h4>ABOUT US</h4>
+          <h4>CONTACT US</h4>
+          <h4>AFFILIATES</h4>
+          <h4>RESOURCES</h4>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-icons">
+        <h3>Copy Rights Reserved</h3>
+        <p style="font-weight: 550; letter-spacing: 1px;">Saii-Abburi</p>
+      </div>
+    </footer>
+    <script>
+      let loginBtn = document.getElementById("login");
+      loginBtn.addEventListener("click", () => {
+        loginBtn.innerText === "SignUp"
+          ? (loginBtn.innerHTML = "Login")
+          : (loginBtn.innerHTML = "SignUp");
+      });
+      let cart = document.getElementById("cart");
+      cart.addEventListener("click", () => {
+        if (
+          document.getElementsByClassName("cart")[0].style.display === "block"
+        ) {
+          document.getElementsByClassName("cart")[0].style.display = "none";
+        } else {
+          document.getElementsByClassName("cart")[0].style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 id="welcome">
+      Welcome to the Mens Top wear section . Grab the perfect Topwear for you
+    </h1>
+    <h1 id="denim">Denim Jackets</h1>
+    <section id="menu-point"></section>
+    <section class="hoodie">
+      <h1 id="hoodies">Hoodies</h1>
+      <div class="hoodies"></div>
+    </section>
+    <section class="Tshirt">
+      <h1 id="hoodies">Tshirts</h1>
+      <div class="tshirts">
+        <div id="card">
+          <img src="tshirt.jpg" alt="" style="width: 220px" />
+          <h2>Tshirt</h2>
+          <p>₹ 1299</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
+            facilis animi
+          </p>
+          <button>Add to cart</button>
+        </div>
+        <div id="card">
+          <img src="tshirt.jpg" alt="" style="width: 220px" />
+          <h2>Tshirt</h2>
+          <p>₹ 1299</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
+            facilis animi
+          </p>
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      const cardData = [
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTRg9-7CzkNgkGH13_6KmITRnGPKey0d5MK3iJxbCESOB9mUroEfdkDDAttTx28gMTcSkvmd6ymkjTLeMyFck4m9X8TO2iQ4JtQPfJgtPJ1TzKcFAjuo9Cy",
+          title: "Denim",
+          price: "₹ 999",
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTRg9-7CzkNgkGH13_6KmITRnGPKey0d5MK3iJxbCESOB9mUroEfdkDDAttTx28gMTcSkvmd6ymkjTLeMyFck4m9X8TO2iQ4JtQPfJgtPJ1TzKcFAjuo9Cy",
+          title: "Denim",
+          price: "₹ 999",
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTRg9-7CzkNgkGH13_6KmITRnGPKey0d5MK3iJxbCESOB9mUroEfdkDDAttTx28gMTcSkvmd6ymkjTLeMyFck4m9X8TO2iQ4JtQPfJgtPJ1TzKcFAjuo9Cy",
+          title: "Denim",
+          price: "₹ 999",
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTRg9-7CzkNgkGH13_6KmITRnGPKey0d5MK3iJxbCESOB9mUroEfdkDDAttTx28gMTcSkvmd6ymkjTLeMyFck4m9X8TO2iQ4JtQPfJgtPJ1TzKcFAjuo9Cy",
+          title: "Denim",
+          price: "₹ 999",
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTRg9-7CzkNgkGH13_6KmITRnGPKey0d5MK3iJxbCESOB9mUroEfdkDDAttTx28gMTcSkvmd6ymkjTLeMyFck4m9X8TO2iQ4JtQPfJgtPJ1TzKcFAjuo9Cy",
+          title: "Denim",
+          price: "₹ 999",
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTRg9-7CzkNgkGH13_6KmITRnGPKey0d5MK3iJxbCESOB9mUroEfdkDDAttTx28gMTcSkvmd6ymkjTLeMyFck4m9X8TO2iQ4JtQPfJgtPJ1TzKcFAjuo9Cy",
+          title: "Denim",
+          price: "₹ 999",
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+      ];
+
+      const menuPoint = document.getElementById("menu-point");
+
+      cardData.forEach((card) => {
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("card");
+        cardDiv.setAttribute("id", "card");
+
+        cardDiv.innerHTML = `
+    <img src="${card.image}" alt="${card.title}" />
+    <h2>${card.title}</h2>
+    <p>${card.price}</p>
+    <p>${card.description}</p>
+    <button>Add to cart</button>
+  `;
+
+        menuPoint.appendChild(cardDiv);
+      });
+
+      const hoodiesData = [
+        {
+          id: 1,
+          image: "hoodie.jpg",
+          title: "Hoodie",
+          price: 1299,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 2,
+          image: "hoodie2.jpg",
+          title: "Hoodie Black",
+          price: 1499,
+          description:
+            "Stylish black hoodie for winter. Lorem ipsum dolor sit amet.",
+        },
+        {
+          id: 3,
+          image: "hoodie3.jpg",
+          title: "Hoodie Grey",
+          price: 1399,
+          description:
+            "Comfortable grey hoodie with premium fabric. Lorem ipsum dolor sit amet.",
+        },
+        {
+          id: 4,
+          image: "hoodie4.jpg",
+          title: "Hoodie Grey",
+          price: 1499,
+          description:
+            "Comfortable grey hoodie with premium fabric. Lorem ipsum dolor sit amet.",
+        },
+      ];
+      const hoodiesSection = document.querySelector(".hoodies");
+
+      hoodiesData.forEach((hoodie) => {
+        const card = document.createElement("div");
+        card.id = "card";
+
+        card.innerHTML = `
+    <img src="${hoodie.image}" alt="${hoodie.title}" style="width: 220px" />
+    <h2>${hoodie.title}</h2>
+    <p>₹ ${hoodie.price}</p>
+    <p>${hoodie.description}</p>
+    <button>Add to cart</button>
+  `;
+
+        hoodiesSection.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

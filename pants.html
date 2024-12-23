@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 id="welcome">
+      Welcome to the Mens Bottom wear section . Grab the perfect Bottomwear for
+      you
+    </h1>
+    <h1 id="denim">Denim Jeans</h1>
+    <section id="menu-point">
+      <!-- Dynamic cards will be appended here by JavaScript -->
+    </section>
+    <section class="hoodie">
+      <h1 id="hoodies">Cargos</h1>
+      <div class="hoodies"></div>
+    </section>
+    <section class="Tshirt">
+      <h1 id="hoodies">Realxed fit</h1>
+      <div class="tshirts">
+        <div id="card">
+          <img src="relaxedfit.jpeg" alt="" style="width: 220px" />
+          <h2>relaxedfit</h2>
+          <p>₹ 1299</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
+            facilis animi
+          </p>
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const pantsData = [
+        {
+          id: 1,
+          image: "denimjeans.jpg",
+          title: "Denim",
+          price: 999,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 2,
+          image: "denimjeans.jpg",
+          title: "Denim",
+          price: 999,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 3,
+          image: "denimjeans.jpg",
+          title: "Denim",
+          price: 999,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 4,
+          image: "denimjeans.jpg",
+          title: "Denim",
+          price: 999,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 5,
+          image: "denimjeans.jpg",
+          title: "Denim",
+          price: 999,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+      ];
+      const pantsSection = document.querySelector("#menu-point");
+
+      pantsData.forEach((pant) => {
+        const card = document.createElement("div");
+        card.id = "card";
+
+        card.innerHTML = `
+    <img src="${pant.image}" style="width: 230px;" alt="${pant.title}" />
+    <h2>${pant.title}</h2>
+    <p>₹ ${pant.price}</p>
+    <p>${pant.description}</p>
+    <button>Add to cart</button>
+  `;
+
+        pantsSection.appendChild(card);
+      });
+
+      // Create an array for cargos data
+      const cargosData = [
+        {
+          id: 1,
+          image: "cargos.jpg",
+          title: "Cargo",
+          price: 1299,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 2,
+          image: "cargos.jpg",
+          title: "Cargo",
+          price: 1299,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 3,
+          image: "cargos.jpg",
+          title: "Cargo",
+          price: 1299,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 4,
+          image: "cargos.jpg",
+          title: "Cargo",
+          price: 1299,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+      ];
+
+      // Dynamically render the cargos section
+      const cargosSection = document.querySelector(".hoodies"); // Target the Cargos section container
+      cargosSection.innerHTML = ""; // Clear any existing content
+
+      cargosData.forEach((cargo) => {
+        // Create card container
+        const card = document.createElement("div");
+        card.id = "card";
+
+        // Add content to the card
+        card.innerHTML = `
+    <img src="${cargo.image}" style="width: 220px;" alt="${cargo.title}" />
+    <h2>${cargo.title}</h2>
+    <p>₹ ${cargo.price}</p>
+    <p>${cargo.description}</p>
+    <button>Add to cart</button>
+  `;
+
+        // Append card to the cargos section
+        cargosSection.appendChild(card);
+      });
+      // Create an array for Relaxed Fit data
+      const relaxedFitData = [
+        {
+          id: 1,
+          image: "relaxedfit.jpeg",
+          title: "Relaxed Fit",
+          price: 1499,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 2,
+          image: "relaxedfit.jpeg",
+          title: "Relaxed Fit",
+          price: 1499,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 3,
+          image: "relaxedfit.jpeg",
+          title: "Relaxed Fit",
+          price: 1499,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+        {
+          id: 4,
+          image: "relaxedfit.jpeg",
+          title: "Relaxed Fit",
+          price: 1499,
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis animi",
+        },
+      ];
+
+      // Dynamically render the Relaxed Fit section
+      const relaxedFitSection = document.querySelector(".tshirts"); // Target the Relaxed Fit section container
+      relaxedFitSection.innerHTML = ""; // Clear any existing content
+
+      relaxedFitData.forEach((item) => {
+        // Create card container
+        const card = document.createElement("div");
+        card.id = "card";
+
+        // Add content to the card
+        card.innerHTML = `
+    <img src="${item.image}" style="width: 220px;" alt="${item.title}" />
+    <h2>${item.title}</h2>
+    <p>₹ ${item.price}</p>
+    <p>${item.description}</p>
+    <button>Add to cart</button>
+  `;
+
+        // Append card to the Relaxed Fit section
+        relaxedFitSection.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

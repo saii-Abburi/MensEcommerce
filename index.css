@@ -7,8 +7,19 @@
     sans-serif;
   scroll-behavior: smooth;
 }
+#preloader{
+  background: #000 url(./assets/loader.gif) no-repeat center;
+  background-size: 20%;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+}
+
+
 #header-main {
-  background-image: url(./banner.jpg);
+  background-image: url(./assets/banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,6 +157,9 @@ header {
   margin-top: 20px;
 }
 
+
+
+
 .newarrivals {
   display: flex;
   justify-content: center;
@@ -218,6 +232,63 @@ header {
   align-items: center;
   justify-content: center;
 }
+.imgspinner{
+  display: none;
+  justify-content: center;
+  overflow: hidden;
+  height: 500px;
+  margin-top: 50px;
+  color:#323b2d;
+}
+.imgspinner h1{
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 550;
+}
+.slider{
+  position: relative;
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+}
+@keyframes rotate {
+  0%{
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100%{
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.slider span{
+  position: absolute;
+  top: 42%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+.slider span img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 2s;
+}
+.slider span:hover img{
+  transform: translateY(-50px) scale(1.2);
+}
+
+
+
+
 footer {
   background-color: #323b2d;
   color: white;
@@ -269,7 +340,6 @@ footer .footer-icons {
   background-color: #fff;
   color: #323b2d;
   margin-top: 50px;
-  height: 400px;
   display: flex;
   justify-content: space-around;
   padding: 20px 80px;
@@ -419,14 +489,13 @@ textarea {
   }
   #header-main .main {
     width: 100vw;
+    padding: 0px;
   }
   .newarrivals div img {
     width: 150px;
   }
   .newarrivals {
     display: flex;
-    justify-content: normal;
-    gap: 0;
   }
   .about {
     flex-direction: column;
@@ -442,6 +511,7 @@ textarea {
     padding: 10px;
     flex-direction: column;
     height: 100%;
+    gap: 20px;
     margin-bottom: 20px;
   }
   .store img{
@@ -451,12 +521,21 @@ textarea {
     flex-direction: column-reverse;
   }
   .usleft img{
-    width: 90vw;
+    width: 350px;
   }
   footer .footer{
     align-items: center;
     flex-direction: column;
     gap: 5px;
     text-align: center;
+  }
+  .imgspinner{
+    display: flex;
+  }
+  .store img:hover{
+    transform: translateY(-5px);
+  }
+  .slider{
+    margin-right: 0px;
   }
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div id="preloader"></div>
     <section id="header-main">
       <header>
         <div class="logo">
@@ -19,11 +20,8 @@
             <a href="#about"><li >About us</li></a>
             <a href="#Contact"><li>Contact</li></a>
             <a href="#service"><li>Service</li></a>
+            <a href=""><li>Products</li></a>
           </ul>
-          <div class="nav-search">
-            <input type="text" placeholder="Search For the Products" />
-            <button>Search</button>
-          </div>
           <div class="login">
             <button id="login">SignUp</button>
             <button id="cart">Cart</button>
@@ -36,19 +34,32 @@
         <a href="#shopnow"><button>Shop Now</button></a>
       </div>
     </section>
+    <section class="imgspinner">
+      <h1>explore our collection</h1>
+      <div class="slider">
+        <span style="--i:1;"><img src="./assets/hoodie.jpg" alt=""></span>
+        <span style="--i:2;"><img src="./assets/hoodie.jpg" alt=""></span>
+        <span style="--i:3;"><img src="./assets/hoodie.jpg" alt=""></span>
+        <span style="--i:4;"><img src="./assets/hoodie.jpg" alt=""></span>
+        <span style="--i:5;"><img src="./assets/hoodie.jpg" alt=""></span>
+        <span style="--i:6;"><img src="./assets/hoodie.jpg" alt=""></span>
+        <span style="--i:7;"><img src="./assets/hoodie.jpg" alt=""></span>
+        <span style="--i:8;"><img src="./assets/hoodie.jpg" alt=""></span>
+      </div>
+    </section>
 
     <section class="arrivals">
       <h1>New Arrivals</h1>
       <div class="newarrivals" id="shopnow">
         <div>
           <a href="shirts.html">
-            <img src="pngegg.png" alt="" />
+            <img src="./assets/pngegg.png" alt="" />
             <p>Mens Shirts</p>
           </a>
         </div>
         <div>
           <a href="pants.html">
-            <img src="pngwing.com.png" alt="" />
+            <img src="./assets/pngwing.com.png" alt="" />
             <p>Mens Pants</p>
           </a>
         </div>
@@ -59,7 +70,7 @@
 
     <section class="about">
       <div class="left">
-        <img src="SuitBackGround.png" alt="" />
+        <img src="./assets/SuitBackGround.png" alt="" />
       </div>
       <div class="right">
         <h1>A CUT ABOVE</h1>
@@ -73,7 +84,7 @@
     </section>
     <section class="store " id="service">
       <div class="left">
-        <img src="Store.jfif" alt="" />
+        <img src="./assets/Store.jfif" alt="" />
       </div>
       <div class="right">
         <h1>Our Store provides You the best Service.</h1>
@@ -102,7 +113,7 @@
         </p>
       </div>
       <div class="usleft">
-        <img src="whyUs.jpg" alt="" />
+        <img src="./assets/whyUs.jpg" alt="" />
       </div>
     </section>
     <section class="contact-us" id="Contact">
@@ -179,6 +190,12 @@
           document.getElementsByClassName("cart")[0].style.display = "block";
         }
       });
+    </script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener('load' , ()=>{
+        loader.style.display = 'none';
+      })
     </script>
   </body>
 </html>

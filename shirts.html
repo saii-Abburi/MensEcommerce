@@ -4,11 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .nav-menu ul li a {
+        color: black;
+      }
+      .nav-menu ul li::before {
+        content: "";
+        width: 0%;
+        height: 3px;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all 0.3s;
+      }
+      #cart {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        margin-left: 12px;
+      }
+      @media screen and (max-width: 600px) {
+        .nav-menu ul li a {
+          color: white;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1 id="welcome">
-      Welcome to the Mens Top wear section . Grab the perfect Topwear for you
-    </h1>
+    <header style="background: radial-gradient(#fff, #e25e4c)">
+      <div class="logo">
+        <img src="./assets/logo.png" />
+      </div>
+      <div class="nav-menu">
+        <nav>
+          <ul id="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="signup.html">Account</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icons">
+          <img
+            id="header-menu"
+            src="./assets/menu.png"
+            alt="Menu Icon"
+            onclick="menutoggle()"
+          />
+          <button id="cart">
+            <img src="./assets/cart.png" alt="Cart Icon" />
+          </button>
+        </div>
+      </div>
+    </header>
     <h1 id="denim">Denim Jackets</h1>
     <section id="menu-point"></section>
     <section class="hoodie">
@@ -159,6 +214,31 @@
   `;
 
         hoodiesSection.appendChild(card);
+      });
+    </script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", () => {
+        loader.style.display = "none";
+      });
+    </script>
+    <script>
+      // js for toggle menu
+      var menuItems = document.getElementById("menu-items");
+
+      function menutoggle() {
+        if (menuItems.style.display === "none") {
+          menuItems.style.display = "flex";
+        } else {
+          menuItems.style.display = "none";
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        var cart = document.getElementById("cart");
+        cart.onclick = function () {
+          console.log(200); 
+          window.location = "cart.html"; 
+        };
       });
     </script>
   </body>

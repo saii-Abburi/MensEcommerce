@@ -22,7 +22,7 @@
           <nav>
             <ul id="menu-items">
               <li><a href="#">Home</a></li>
-              <li><a href="#shopnow">Products</a></li>
+              <li><a href="products.html">Products</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#Contact">Contact</a></li>
               <li><a href="signup.html">Account</a></li>
@@ -234,7 +234,7 @@
               everything is clear as can be.</small
             >
             <br />
-            <button>Buy Now -></button>
+            <button>Buy Now &#8594;</button>
           </div>
         </div>
       </div>
@@ -258,14 +258,12 @@
       </div>
     </section>
 
-    <div class="cart"></div>
-
     <section class="about">
       <div class="left">
         <img src="./assets/SuitBackGround.png" alt="" />
       </div>
       <div class="right">
-        <h1 style="color: white">A CUT ABOVE</h1>
+        <h1 style="color: #000">A CUT ABOVE</h1>
         <p style="text-align: center; font-size: 32px">-</p>
         <p style="font-family: 'Times New Roman', Times, serif">
           Our United Tailors suits are slim for a clean and tailored fit. A
@@ -468,6 +466,13 @@
           menuItems.style.display = "none";
         }
       }
+      document.addEventListener("DOMContentLoaded", function () {
+        var cart = document.getElementById("cart");
+        cart.onclick = function () {
+          console.log(200); 
+          window.location = "cart.html"; 
+        };
+      });
     </script>
   </body>
 </html>
